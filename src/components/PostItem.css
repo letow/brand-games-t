@@ -1,0 +1,22 @@
+.post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #cecece;
+    height: 300px;
+}
+.post__btn {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.post__btn:hover {
+    background-color: #eee;
+}
