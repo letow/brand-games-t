@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/brand-games-t/static/css/main.96271360.css",
+    "main.js": "/brand-games-t/static/js/main.baf34291.js",
+    "index.html": "/brand-games-t/index.html",
+    "main.96271360.css.map": "/brand-games-t/static/css/main.96271360.css.map",
+    "main.baf34291.js.map": "/brand-games-t/static/js/main.baf34291.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96271360.css",
+    "static/js/main.baf34291.js"
+  ]
+}
