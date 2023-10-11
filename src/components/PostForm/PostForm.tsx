@@ -1,5 +1,5 @@
 import "./PostForm.css";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAppDispatch } from "../../hooks";
 import { addPost } from "../../store/postsSlice";
 
@@ -9,6 +9,13 @@ const PostForm = () => {
     const [status, setStatus] = useState<"success" | null>(null);
 
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        if (status)
+            setTimeout(() => {
+                setStatus(null);
+            }, 3000);
+    }, [status]);
 
     const addPostHandler = () => {
         if (titleRef.current?.value && textRef.current?.value) {

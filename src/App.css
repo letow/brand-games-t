@@ -1,4 +1,64 @@
-.App {
+.app__wrapper {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
+    padding: 60px;
+}
+
+.app__header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: aqua;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+}
+
+.app__header__btn {
+    height: 20px;
+    width: 30px;
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.app__header__btn span {
+    position: absolute;
+    top: 9px;
+    width: 30px;
+    background-color: #000;
+    height: 2px;
+    transition: all 0.4s;
+}
+
+.app__header__btn::after,
+.app__header__btn::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    background-color: #000;
+    height: 2px;
+    transition: all 0.4s;
+}
+
+.app__header__btn::before {
+    top: 0;
+}
+
+.app__header__btn::after {
+    bottom: 0;
+}
+
+.active.app__header__btn span {
+    transform: rotate(45deg);
+}
+
+.active.app__header__btn::before {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+.active.app__header__btn::after {
+    transform: rotate(45deg);
+    bottom: 9px;
 }

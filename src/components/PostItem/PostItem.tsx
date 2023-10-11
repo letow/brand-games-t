@@ -9,12 +9,10 @@ interface IPostItemProps {
 }
 
 const PostItem: FC<IPostItemProps> = ({ id, title }) => {
-    const dispatch = useAppDispatch();
-
     return (
         <div className="post">
             <h3 className="post__header">{`${id}. ${title}`}</h3>
-            <Link to={`/post/${id}`} className="post__btn">
+            <Link to={`/posts/${id}`} className="post__btn">
                 Read post
             </Link>
         </div>

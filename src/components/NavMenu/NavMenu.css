@@ -1,0 +1,50 @@
+.menu {
+    position: fixed;
+    width: 30vw;
+    left: 0;
+    top: 50px;
+    z-index: 50;
+    font-size: 20px;
+    transform: translateX(-100%);
+    transition: all 0.8s;
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+
+.menu__content {
+    width: 100%;
+    background-color: #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 50px);
+    overflow-y: scroll;
+}
+
+.menu__content ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu__content ul {
+    width: 80%;
+    padding: 0;
+}
+
+.menu__content ul li {
+    color: #000;
+    list-style: none;
+    text-align: center;
+    margin: 14px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 850px) {
+    .menu {
+        width: 100vw;
+    }
+}

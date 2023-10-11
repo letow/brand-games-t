@@ -1,8 +1,15 @@
+h4 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
 .post-form {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 18px;
+    max-width: 700px;
 }
 
 input,
@@ -11,7 +18,20 @@ button {
     font-family: "Arial", sans-serif;
     padding: 10px;
     font-size: 18px;
+    resize: none;
 }
+
 .post-form__message {
+    position: relative;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 30vh;
+    margin: 0 auto;
+    max-width: fit-content;
     color: green;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #000;
+    box-shadow: 0 0 5px 2px #00000055;
 }

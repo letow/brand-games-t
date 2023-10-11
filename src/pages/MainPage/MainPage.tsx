@@ -1,6 +1,6 @@
-import PostItem from "../components/PostItem/PostItem";
+import PostItem from "../../components/PostItem/PostItem";
 import { Carousel } from "react-responsive-carousel";
-import { useAppSelector } from "../hooks";
+import { useAppSelector } from "../../hooks";
 
 const MainPage = () => {
     const posts = useAppSelector((state) => state.toolkit.posts);
