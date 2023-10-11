@@ -1,10 +1,5 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
-type Post = {
-    id: number;
-    title: string;
-    body: string;
-};
+import { Post } from "../types/Post";
 
 type PostsState = {
     posts: Post[];
