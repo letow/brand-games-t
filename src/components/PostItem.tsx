@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useAppDispatch } from "../hooks";
 import "./PostItem.css";
+import { Link } from "react-router-dom";
 
 interface IPostItemProps {
     id: number;
@@ -13,9 +14,9 @@ const PostItem: FC<IPostItemProps> = ({ id, title }) => {
     return (
         <div className="post">
             <h3 className="post__header">{`${id}. ${title}`}</h3>
-            <a href="#" className="post__btn">
+            <Link to={`/post/${id}`} className="post__btn">
                 Read post
-            </a>
+            </Link>
         </div>
     );
 };

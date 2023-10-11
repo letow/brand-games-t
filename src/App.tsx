@@ -1,14 +1,15 @@
 import "./App.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { getPosts } from "./store/postsSlice";
 import { useAppDispatch, useAppSelector } from "./hooks";
-import PostItem from "./components/PostItem";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
+import PostPage from "./pages/PostPage";
 
 function App() {
-    const posts = useAppSelector((state) => state.toolkit.posts);
     const dispatch = useAppDispatch();
+    const posts = useAppSelector((state) => state.toolkit.posts);
 
     useEffect(() => {
         dispatch(getPosts());
@@ -16,11 +17,16 @@ function App() {
 
     return (
         <div className="App">
-            <Carousel autoPlay={false} swipeable>
+            <Routes>
                 {posts.map((post) => (
-                    <PostItem {...post} />
+                    <Route
+                        path={`/post/${post.id}`}
+                        element={<PostPage post={post} />}
+                    ></Route>
                 ))}
-            </Carousel>
+                <Route path={"/"} element={<MainPage />}></Route>
+                <Route path={"*"} element={<MainPage />}></Route>
+            </Routes>
         </div>
     );
 }
