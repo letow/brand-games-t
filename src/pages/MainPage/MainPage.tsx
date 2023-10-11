@@ -6,13 +6,11 @@ const MainPage = () => {
     const posts = useAppSelector((state) => state.toolkit.posts);
 
     return (
-        <>
-            <Carousel autoPlay={false} swipeable>
-                {posts.map((post) => (
-                    <PostItem {...post} />
-                ))}
-            </Carousel>
-        </>
+        <Carousel autoPlay={false} swipeable showStatus={false} useKeyboardArrows>
+            {posts.map((post) => (
+                <PostItem {...post} />
+            ))}
+        </Carousel>
     );
 };
 
