@@ -1,0 +1,17 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
+}
+
+input,
+textarea,
+button {
+    font-family: "Arial", sans-serif;
+    padding: 10px;
+    font-size: 18px;
+}
+.post-form__message {
+    color: green;
+}

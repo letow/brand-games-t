@@ -1,4 +1,4 @@
-import PostItem from "../components/PostItem";
+import PostItem from "../components/PostItem/PostItem";
 import { Carousel } from "react-responsive-carousel";
 import { useAppSelector } from "../hooks";
 

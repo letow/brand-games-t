@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useAppDispatch } from "../hooks";
+import { useAppDispatch } from "../../hooks";
 import "./PostItem.css";
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Post } from "../types/Post";
+import PostForm from "../components/PostForm/PostForm";
 
 interface IPostPageProps {
     post: Post;
@@ -7,8 +8,11 @@ interface IPostPageProps {
 const PostPage: FC<IPostPageProps> = ({ post }) => {
     return (
         <div>
-            {post.id}. {post.title}
+            <h4>
+                {post.id}. {post.title}
+            </h4>
             <p className="a">{post.body}</p>
+            <PostForm />
         </div>
     );
 };

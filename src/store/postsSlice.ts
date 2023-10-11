@@ -35,6 +35,7 @@ const toolkitSlice = createSlice({
     initialState,
     reducers: {
         addPost(state, action: PayloadAction<Post>) {
+            if (action.payload.id === -1) action.payload.id = state.posts.length + 1;
             state.posts.push(action.payload);
         },
     },
