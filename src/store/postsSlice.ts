@@ -20,12 +20,13 @@ export const getPosts = createAsyncThunk(
             const response = await fetch(
                 "https://jsonplaceholder.typicode.com/posts?_limit=20"
             );
-            if (!response.ok) throw new Error("Something went wrong!");
+            if (!response.ok)
+                throw new Error("Something went wrong! Probably, the link is broken.");
 
             const data = await response.json();
             return data;
         } catch (error: any) {
-            rejectWithValue(error.message);
+            return rejectWithValue(error.message);
         }
     }
 );
